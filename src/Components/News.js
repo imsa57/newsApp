@@ -108,7 +108,7 @@ export class news extends Component {
       <>
         <h1 className="text-center" style={{ margin: '35px 0px' }}>NewsMonkey - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h1>
         <InfiniteScroll
-            dataLength={this.state.articles.length}
+            dataLength={this.state.articles ? this.state.articles.length: 0}
             next={this.fetchMoreData}
             hasMore={true}
             loader={< Spinner />}>
